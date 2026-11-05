@@ -1,0 +1,311 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--page-text);
+  font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition-property: background-color, color;
+  transition-duration: 220ms;
+  transition-timing-function: ease-out;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 610px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instrument-casing {
+  width: 100%;
+  background-color: var(--casing-bg);
+  color: var(--casing-text);
+  border: 1px solid var(--casing-border);
+  border-radius: var(--radius-casing);
+  box-shadow: var(--casing-shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition-property: background-color, border-color, box-shadow, color;
+  transition-duration: 220ms;
+  transition-timing-function: ease-out;
+}
+
+.top-header-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.top-module {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: var(--radius-module);
+  background-color: var(--module-bg);
+  border: var(--module-border);
+  box-shadow: var(--module-shadow);
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  flex: 1;
+  min-width: 200px;
+}
+
+.factor-y {
+  color: var(--factor-y-color);
+}
+
+.factor-x {
+  color: var(--factor-x-color);
+}
+
+.op-sym {
+  color: var(--op-color);
+}
+
+.num-slot {
+  display: inline-block;
+  min-width: 2ch;
+  text-align: center;
+}
+
+.product-val {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.2ch;
+  padding: 2px 10px;
+  border-radius: 8px;
+  color: var(--product-color);
+  background: var(--product-bg);
+  border: var(--product-border);
+  font-weight: 700;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-challenge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  height: 42px;
+  border-radius: var(--radius-btn);
+  border: 1px solid #d97706;
+  background-color: #f59e0b;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 2px 0 #b45309;
+  transition-property: background-color, border-color, transform, box-shadow;
+  transition-duration: 140ms;
+  transition-timing-function: ease-out;
+}
+
+.btn-challenge:hover {
+  background-color: #d97706;
+}
+
+.btn-challenge:active {
+  transform: translateY(1px);
+}
+
+.btn-challenge.active-quiz {
+  background-color: #e11d48;
+  border-color: #be123c;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 2px 0 #881337;
+}
+
+.icon-square-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-btn);
+  background-color: var(--icon-btn-bg);
+  color: var(--icon-btn-color);
+  border: var(--icon-btn-border);
+  box-shadow: var(--icon-btn-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-property: background-color, border-color, color, transform, box-shadow;
+  transition-duration: 140ms;
+  transition-timing-function: ease-out;
+}
+
+.icon-square-btn:hover {
+  background-color: var(--icon-btn-hover-bg);
+}
+
+.icon-square-btn:active {
+  transform: translateY(1px);
+}
+
+.icon-square-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-muted {
+  color: #e11d48;
+}
+
+.icon-sun {
+  color: #fbbf24;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.quiz-banner {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-well);
+  background-color: #ea580c;
+  border: 1.5px solid #fdba74;
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 4px 0 #9a3412;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quiz-top-row,
+.quiz-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quiz-mission-group,
+.quiz-score-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quiz-badge {
+  padding: 3px 8px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0, 0, 0, 0.24);
+  border-radius: 6px;
+}
+
+.quiz-prompt {
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.quiz-score-pill {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.76rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 9px;
+  border-radius: 8px;
+}
+
+.quiz-skip-btn {
+  background: transparent;
+  border: none;
+  color: #ffedd5;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.quiz-feedback {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffedd5;
+}
+
+.quiz-feedback.success {
+  background: #059669;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+.quiz-feedback.error {
+  background: #be123c;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.quiz-check-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #c2410c;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 120ms ease;
+  margin-left: auto;
+}
+
+.quiz-check-btn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  .instrument-casing {
+    padding: 12px;
+    border-radius: 18px;
+  }
+}

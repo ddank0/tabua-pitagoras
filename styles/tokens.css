@@ -1,0 +1,189 @@
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  --font-mono: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+
+  --radius-casing: 24px;
+  --radius-well: 16px;
+  --radius-module: 14px;
+  --radius-btn: 13px;
+  --radius-ruler: 8px;
+  --radius-cell: 6px;
+
+  --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+body {
+  --page-bg: #efe5d5;
+  --page-text: #3d2b1c;
+}
+
+body.body-dark {
+  --page-bg: #0f0f0e;
+  --page-text: #f4f1ea;
+}
+
+.instrument-casing.theme-light {
+  --casing-bg: #f7efe4;
+  --casing-text: #3d2b1c;
+  --casing-border: #dcc3a1;
+  --casing-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 6px 0 #c5a882,
+    0 18px 32px rgba(92, 71, 48, 0.16);
+
+  --module-bg: #fdfaf6;
+  --module-border: 1.5px solid #dcc3a1;
+  --module-shadow: inset 0 2px 3px rgba(138, 114, 86, 0.1), 0 1px 0 #ffffff;
+
+  --factor-y-color: #c84b28;
+  --factor-x-color: #1d5c63;
+  --op-color: #9c8c79;
+
+  --product-color: #1f4e3d;
+  --product-bg: #dcece5;
+  --product-border: 1.5px solid #8abca8;
+
+  --icon-btn-bg: #efe0ca;
+  --icon-btn-hover-bg: #e6d2b5;
+  --icon-btn-color: #473221;
+  --icon-btn-border: 1.5px solid #dcc3a1;
+  --icon-btn-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 2px 0 #c5a882;
+
+  --well-bg: #dfd0bc;
+  --well-border: 1.5px solid #c4b097;
+  --well-shadow: inset 0 3px 5px rgba(107, 83, 56, 0.18);
+
+  --cell-bg: #f5ede2;
+  --cell-color: #b0a08d;
+  --cell-border: #e2d4c3;
+  --cell-shadow: 0 1px 0 #cbb8a1;
+
+  --hdr-bg: #e9dccb;
+  --hdr-color: #4a3f35;
+  --hdr-border: #cbb79f;
+  --hdr-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 2px 0 #b59f86;
+
+  --corner-bg: #d6c4ae;
+  --corner-color: #6e5d4d;
+  --corner-border: #bfa98e;
+
+  --ruler-h-bg: rgba(200, 75, 40, 0.11);
+  --ruler-h-border: rgba(200, 75, 40, 0.55);
+
+  --ruler-v-bg: rgba(29, 92, 99, 0.11);
+  --ruler-v-border: rgba(29, 92, 99, 0.55);
+
+  --active-y-bg: #c84b28;
+  --active-y-color: #ffffff;
+  --active-y-border: #a33618;
+  --active-y-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 2px 0 #7a240c;
+
+  --active-x-bg: #1d5c63;
+  --active-x-color: #ffffff;
+  --active-x-border: #134146;
+  --active-x-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 2px 0 #0d2e32;
+
+  --band-y-bg: #f9e2da;
+  --band-y-color: #5c2212;
+  --band-y-border: #e09f8d;
+
+  --band-x-bg: #d9ecee;
+  --band-x-color: #123b40;
+  --band-x-border: #88bcc2;
+
+  --band-trail-bg: #ede2d3;
+  --band-trail-color: #7d6e5d;
+  --band-trail-border: #d5c4af;
+
+  --intersection-bg: #246a54;
+  --intersection-color: #ffffff;
+  --intersection-border: #f7ede2;
+  --intersection-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 3px 0 #133c2f,
+    0 6px 14px rgba(36, 106, 84, 0.32);
+}
+
+.instrument-casing.theme-dark {
+  --casing-bg: #181816;
+  --casing-text: #f4f1ea;
+  --casing-border: #2e2d2a;
+  --casing-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 6px 0 #0d0d0c,
+    0 20px 36px rgba(0, 0, 0, 0.45);
+
+  --module-bg: #111110;
+  --module-border: 1px solid #2a2926;
+  --module-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.65);
+
+  --factor-y-color: #ff5a1f;
+  --factor-x-color: #3898ff;
+  --op-color: #6b6860;
+
+  --product-color: #f59e0b;
+  --product-bg: rgba(245, 158, 11, 0.12);
+  --product-border: 1px solid rgba(245, 158, 11, 0.35);
+
+  --icon-btn-bg: #23221f;
+  --icon-btn-hover-bg: #2c2b27;
+  --icon-btn-color: #e6e1d6;
+  --icon-btn-border: 1px solid #383631;
+  --icon-btn-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 0 #0c0c0b;
+
+  --well-bg: #111110;
+  --well-border: 1px solid #2c2b27;
+  --well-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.75);
+
+  --cell-bg: #1c1c1a;
+  --cell-color: #57544e;
+  --cell-border: #252422;
+  --cell-shadow: 0 1px 0 #0b0b0a;
+
+  --hdr-bg: #252421;
+  --hdr-color: #b5b0a6;
+  --hdr-border: #363430;
+  --hdr-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 0 #0b0b0a;
+
+  --corner-bg: #181816;
+  --corner-color: #6b6860;
+  --corner-border: #2c2b27;
+
+  --ruler-h-bg: rgba(255, 90, 31, 0.1);
+  --ruler-h-border: rgba(255, 90, 31, 0.55);
+
+  --ruler-v-bg: rgba(56, 152, 255, 0.1);
+  --ruler-v-border: rgba(56, 152, 255, 0.55);
+
+  --active-y-bg: #ff5a1f;
+  --active-y-color: #111110;
+  --active-y-border: #ff7f50;
+  --active-y-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 2px 0 #9e2f06;
+
+  --active-x-bg: #2b7fff;
+  --active-x-color: #ffffff;
+  --active-x-border: #66a3ff;
+  --active-x-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 2px 0 #10499e;
+
+  --band-y-bg: #291d18;
+  --band-y-color: #ffd6c9;
+  --band-y-border: rgba(255, 90, 31, 0.45);
+
+  --band-x-bg: #172334;
+  --band-x-color: #cfe4ff;
+  --band-x-border: rgba(56, 152, 255, 0.45);
+
+  --band-trail-bg: #1f1f1d;
+  --band-trail-color: #858078;
+  --band-trail-border: #33312d;
+
+  --intersection-bg: #f59e0b;
+  --intersection-color: #111110;
+  --intersection-border: #fde68a;
+  --intersection-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 3px 0 #92400e,
+    0 6px 14px rgba(0, 0, 0, 0.6);
+}

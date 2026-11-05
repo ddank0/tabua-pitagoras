@@ -1,0 +1,10 @@
+{
+  "name": "tabua-pitagoras",
+  "version": "1.0.0",
+  "description": "Aplicação interativa da Tábua de Pitágoras Deslizante com som mecânico e sistema de desafios",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test tests/*.test.js"
+  }
+}
