@@ -6,6 +6,7 @@ import { createBoardView } from './ui/boardView.js';
 import { createHeaderView } from './ui/headerView.js';
 import { createQuizView } from './ui/quizView.js';
 import { bindInputController } from './ui/inputController.js';
+import { registerServiceWorker } from './pwa/registerServiceWorker.js';
 
 function initApplication() {
   const store = createStore(createInitialState());
@@ -29,7 +30,8 @@ function initApplication() {
     iconSoundOnElement: document.getElementById('iconSoundOn'),
     iconSoundOffElement: document.getElementById('iconSoundOff'),
     iconSunElement: document.getElementById('iconSun'),
-    iconMoonElement: document.getElementById('iconMoon')
+    iconMoonElement: document.getElementById('iconMoon'),
+    metaThemeColorElement: document.getElementById('metaThemeColor')
   });
 
   const quizView = createQuizView({
@@ -189,6 +191,8 @@ function initApplication() {
     quizView.render(initialState);
     boardView.render(initialState);
   });
+
+  registerServiceWorker();
 }
 
 initApplication();

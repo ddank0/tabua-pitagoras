@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="112" fill="#f7efe4"/>
+  <rect x="28" y="28" width="456" height="456" rx="88" fill="#dfd0bc" stroke="#c4b097" stroke-width="10"/>
+
+  <!-- Células de fundo 3x3 -->
+  <g fill="#f5ede2" stroke="#cbb8a1" stroke-width="4">
+    <rect x="64" y="64" width="112" height="112" rx="22" fill="#d6c4ae"/>
+    <rect x="200" y="64" width="112" height="112" rx="22" fill="#1d5c63"/>
+    <rect x="336" y="64" width="112" height="112" rx="22" fill="#e9dccb"/>
+
+    <rect x="64" y="200" width="112" height="112" rx="22" fill="#c84b28"/>
+    <rect x="200" y="200" width="112" height="112" rx="22" fill="#246a54"/>
+    <rect x="336" y="200" width="112" height="112" rx="22"/>
+
+    <rect x="64" y="336" width="112" height="112" rx="22" fill="#e9dccb"/>
+    <rect x="200" y="336" width="112" height="112" rx="22"/>
+    <rect x="336" y="336" width="112" height="112" rx="22"/>
+  </g>
+
+  <!-- Régua Vertical Translúcida -->
+  <rect x="192" y="56" width="128" height="400" rx="26" fill="#1d5c63" fill-opacity="0.16" stroke="#1d5c63" stroke-width="6"/>
+
+  <!-- Régua Horizontal Translúcida -->
+  <rect x="56" y="192" width="400" height="128" rx="26" fill="#c84b28" fill-opacity="0.16" stroke="#c84b28" stroke-width="6"/>
+
+  <!-- Visor de Interseção em Destaque -->
+  <rect x="192" y="192" width="128" height="128" rx="26" fill="#246a54" stroke="#f7ede2" stroke-width="10"/>
+
+  <!-- Símbolos e Números -->
+  <text x="120" y="138" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="64" fill="#6e5d4d">×</text>
+  <text x="256" y="140" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="60" fill="#ffffff">8</text>
+  <text x="120" y="276" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="60" fill="#ffffff">7</text>
+  <text x="256" y="276" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="56" fill="#ffffff">56</text>
+</svg>

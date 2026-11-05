@@ -1,5 +1,8 @@
 import { calculateProduct } from '../domain/multiplication.js';
 
+const LIGHT_THEME_COLOR = '#f7efe4';
+const DARK_THEME_COLOR = '#181816';
+
 export function createHeaderView({
   casingElement,
   factorRowElement,
@@ -8,7 +11,8 @@ export function createHeaderView({
   iconSoundOnElement,
   iconSoundOffElement,
   iconSunElement,
-  iconMoonElement
+  iconMoonElement,
+  metaThemeColorElement
 }) {
   let previousRow = null;
   let previousCol = null;
@@ -37,6 +41,10 @@ export function createHeaderView({
 
     casingElement.className = `instrument-casing ${isDark ? 'theme-dark' : 'theme-light'}`;
     document.body.classList.toggle('body-dark', isDark);
+
+    if (metaThemeColorElement) {
+      metaThemeColorElement.setAttribute('content', isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+    }
 
     iconSoundOnElement.classList.toggle('is-hidden', !soundEnabled);
     iconSoundOffElement.classList.toggle('is-hidden', soundEnabled);
